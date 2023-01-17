@@ -1,5 +1,5 @@
 import "./Appsearch.css";
-
+import { FaSearch } from "react-icons/fa";
 function Appsearch(props) {
   const { value, onValueChange } = props;
   return (
@@ -7,14 +7,16 @@ function Appsearch(props) {
       <input
         className="app-search-input"
         type="text"
-        placeholder="ค้นหา"
+        placeholder="Search your pokemon"
         value={value}
         onChange={(event) => {
           onValueChange(event.target.value);
         }}
       />
+      <div className="SearchIcon">
+        <FaSearch />
+      </div>
     </div>
   );
 }
-
 export default Appsearch;

@@ -22,6 +22,7 @@
     color: aliceblue;
     width: 500px;
     height: 700px;
+    border-radius: 10px;
 }
 
 .firstImage{
@@ -58,7 +59,8 @@
     background-color: rgba(0, 0, 0, 0.384);
     color: aliceblue;
     width: 500px;
-    height: 800px;
+    height: 700px;
+    border-radius: 10px;
 }
 
 .Nameh1{
@@ -70,10 +72,8 @@
 }
 
 .psychicStartType{
-    background-color: rgba(146, 81, 148, 0.644);
     color: rgba(146, 81, 148, 0.644);
     position: absolute;
-    color:rgb(0, 0, 0);
     font-size: 20px;
     top: 400px;
     left: 50px;
@@ -357,16 +357,6 @@
     left: 50px;
 }
 
-.NamePlate h5{
-    position:absolute;
-    font-size: 16px;
-    top: 450px;
-    left: 50px;
-    width: 150px;
-    height: 20px;
-    color: black;
-}
-
 .Search-container{
     position: absolute;
     display: flex;
@@ -420,6 +410,7 @@
     position:relative;
 	top:1px;
 }
+
 .Power-stat{
     box-sizing: border-box;
     background-color: black;
@@ -429,12 +420,18 @@
     margin-left: -200px;
     gap: 20px;
     width: 500px;
+    border-radius: 20px;
 }
 
 .pokemonlogo{
+    margin-top: 50px;
     margin-left:  auto;
     margin-right: auto;
     width: 300px;
+}
+.pokemonlogo:hover{
+    scale: 1.1;
+    transition: 1500ms;
 }
 
 h2 {
