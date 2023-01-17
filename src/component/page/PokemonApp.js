@@ -13,6 +13,7 @@ function PokemonApp() {
   );
   const [searchText, setSearchText] = useState("");
   const [selectedPokemon, setSelectedPokemon] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const getAllPokemon = async () => {
     const res = await fetch(loadMore);
@@ -38,9 +39,6 @@ function PokemonApp() {
   };
   const onPokemonOpenClick = (thePokemon) => {
     setSelectedPokemon(thePokemon);
-
-    // camelCase
-    // PascalCase
   };
 
   const filteredpokemon = allPokemon.filter((pokemon) => {
@@ -81,7 +79,11 @@ function PokemonApp() {
         Load more
       </button>
       <div className="info-container">
-        <FakeInfopokemon />
+        {selectedPokemon ? (
+          <FakeInfopokemon pokemon={selectedPokemon} />
+        ) : (
+          <FakeInfopokemon />
+        )}
       </div>
       {selectedPokemon ? <RealInfo pokemon={selectedPokemon} /> : null}
     </div>
@@ -89,7 +91,6 @@ function PokemonApp() {
 }
 
 export default PokemonApp;
-/*<img
-        className="backPicture"
-        src="https://sv1.picz.in.th/images/2022/11/18/G413fe.png"
-      />*/
+
+// camelCase
+// PascalCase

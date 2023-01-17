@@ -1,36 +1,405 @@
 .App{
     background-color: rgba(0, 0, 0, 0.863);
-    margin-top: -22px;
     height: 100vh;
+    padding-top: 100px;
 }
+
+.Container{
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+}
+
 .stat-display{
     position: relative;
     display: flex;
     justify-content: space-around;
-    border: 1px solid;
-}
-.NamePlate{
-    color: aliceblue;
-}
-.NamePlate img{
-      position:absolute;
-      left: 100px;
-      top: 100px;
-}
-.Power-stat{
-    display: flex;
-    color: aliceblue;
-    flex-direction: column;
-    margin-left: 500px;
 }
 
+.NamePlate1{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.384);
+    color: aliceblue;
+    width: 500px;
+    height: 700px;
+}
+
+.firstImage{
+    position: absolute;
+    top: -650px;
+    left: -550px;
+    scale: 0.15;
+}
+
+.StartType{
+    position: absolute;
+    color:white;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.StartName{
+    background-color: gray;
+    position: absolute;
+    color:white;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.NamePlate{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.384);
+    color: aliceblue;
+    width: 500px;
+    height: 800px;
+}
+
+.Nameh1{
+    position: absolute;
+    text-transform: uppercase;
+    top:300px;
+    left:170px;
+    text-align: center;
+}
+
+.psychicStartType{
+    background-color: rgba(146, 81, 148, 0.644);
+    color: rgba(146, 81, 148, 0.644);
+    position: absolute;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.groundStartType{
+    color: rgba(148, 81, 81, 0.644);
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.ghostStartType{ 
+    color:rgb(247, 247, 247);
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.electricStartType{
+    color:rgb(255, 255, 161);
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.bugStartType{
+    color:#F6D6A7;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.poisonStartType {  
+    color:#e0a7f6;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.normalStartType { 
+    color:#9b9191;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.fairyStartType {
+    color:rgba(255, 192, 203, 0.863);
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.fireStartType {
+    color:#FBE3DF;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.grassStartType {
+    color: #E2F9E1;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.waterStartType {
+    color: #E0F1FD;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.flyingStartType{
+    color:#5e66d1d8;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px;
+}
+
+.fightingStartType{
+    color: #d1925ed8;
+    position: absolute;
+    font-size: 20px;
+    top: 400px;
+    left: 50px; 
+}
+
+.psychicStartName{
+    background-color: rgba(146, 81, 148, 0.644);
+    color: rgba(0, 0, 0, 0.644);
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.groundStartName{
+    background-color: rgba(148, 81, 81, 0.644);
+    color: rgba(0, 0, 0, 0.644);
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.ghostStartName{
+    background-color: rgb(247, 247, 247); 
+    color:rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.electricStartName{
+    background-color: rgb(255, 255, 161);
+    color:rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.bugStartName{
+    background-color: #F6D6A7;
+    color:#000000;
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.poisonStartName{
+    background-color: #e0a7f6;  
+    color:#000000;
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.normalStartName{
+     background-color: #9b9191; 
+     color:#000000;
+     position: absolute;
+     border-radius: 2px;
+     width: 150px;
+     height: 40px;
+     text-align: center;
+     padding-top:3px; 
+     font-size: 20px;
+     top: 500px;
+     left: 50px;
+}
+
+.fairyStartName{
+    background-color: rgba(255, 192, 203, 0.863);
+    color:rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.fireStartName {
+    background-color: #FBE3DF;
+    color:#000000;
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.grassStartName {
+    background-color:#E2F9E1;
+    color: #000000;
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.waterStartName{
+    background-color:#E0F1FD;
+    color: #000000;
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.flyingStartName{
+    background-color:#5e66d1d8;
+    color:#000000;
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.fightingStartName{
+    background-color:#d1925ed8;
+    color: #000000;
+    position: absolute;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top:3px; 
+    font-size: 20px;
+    top: 500px;
+    left: 50px;
+}
+
+.NamePlate h5{
+    position:absolute;
+    font-size: 16px;
+    top: 450px;
+    left: 50px;
+    width: 150px;
+    height: 20px;
+    color: black;
+}
+
+.Search-container{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Search-box{
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 110px;
+}
+
+.Input-container{
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.11);
+    color: white;
+    padding: 10px;
+    width: 400px;
+    height: 60px;
+    text-align: center;
+}
 
 .Button-container{  
-    box-shadow:inset 0px 1px 0px 0px #a6827e;
-	background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
-	background-color:#7d5d3b;
+    margin-top: 20px;
+    box-shadow:inset 0px 1px 0px 0px #927875;
+	background:linear-gradient(to bottom, #a5927e 5%, #634b30 100%);
+	background-color:#aa9987;
 	border-radius:3px;
-	border:1px solid #54381e;
+	border:1px solid #928272;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -38,14 +407,409 @@
 	font-size:13px;
 	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #4d3534;  
+	text-shadow:0px 1px 0px #4d3534; 
+    width: 200px; 
 }
 
 .Button-container:hover{
     background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
 	background-color:#634b30;
 }
+
 .Button-container:active{
     position:relative;
 	top:1px;
+}
+.Power-stat{
+    box-sizing: border-box;
+    background-color: black;
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+    margin-left: -200px;
+    gap: 20px;
+    width: 500px;
+}
+
+.pokemonlogo{
+    margin-left:  auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+h2 {
+    margin:0;
+}
+
+.Hp-container{
+    display: flex;
+    height: 30px;
+    margin-left:30px;
+}
+
+.Hp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 30px;
+}
+
+.HpBar{
+    background-color: red;
+    border-radius:0 2px 2px 0;
+    height: 30px;
+    width: 20px;
+    color: black;
+}
+
+.Attack-container{
+    display: flex;
+    margin: 0;
+    margin-left:30px;
+}
+
+.Attack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 110px;
+}
+
+.AttackBar{
+    background-color: orange;
+    border-radius:0 2px 2px 0;
+    height: 30px;
+    width: 20px;
+    color: black;
+}
+
+.Defense-container{
+    display: flex;
+    margin-left:30px;
+}
+
+.Defense{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 110px;
+}
+
+.DefenseBar{
+    background-color: rgb(71, 196, 71);
+    border-radius:0 2px 2px 0;
+    height: 30px;
+    width: 20px;
+    color: black;
+}
+
+.Special-ATK-container{
+    display: flex;
+    margin-left:30px;
+}
+
+.Special-ATK{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 110px;
+}
+
+.Special-ATKBar{
+    background-color: rgb(71, 79, 196);
+    border-radius:0 2px 2px 0;
+    height: 30px;
+    width: 20px;
+    color: black;
+}
+
+.Special-DEF-container{
+    display: flex;
+    margin-left:30px;
+}
+
+.Special-DEF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 110px;
+}
+
+.Special-DEFBar{
+    background-color: rgb(196, 188, 71);
+    border-radius:0 2px 2px 0;
+    height: 30px;
+    width: 20px;
+    color: black;
+}
+
+.Speed-container{
+    display: flex;
+    margin-left:30px;
+}
+
+.Speed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 110px;
+}
+
+.SpeedBar{
+    background-color: rgb(71, 136, 196);
+    border-radius:0 2px 2px 0;
+    height: 30px;
+    width: 20px;
+    color: black;
+}
+
+.psychic{
+    background-color: rgba(146, 81, 148, 0.644);
+    color: rgba(146, 81, 148, 0.644);
+}
+
+.ground {
+    background-color: rgba(148, 81, 81, 0.644);
+    color: rgba(148, 81, 81, 0.644); ;
+}
+
+.ghost {
+    background-color: rgb(247, 247, 247); 
+    color:rgb(247, 247, 247);  
+}
+
+.electric {
+    background-color: rgb(255, 255, 161);
+    color:rgb(255, 255, 161); ;
+}
+
+.bug {
+    background-color: #F6D6A7;
+    color:#F6D6A7; ;
+}
+
+.poison {
+    background-color: #e0a7f6;  
+    color:#e0a7f6;  ;
+}
+
+.normal {
+     background-color: #9b9191; 
+     color:#9b9191; ;
+}
+
+.fairy {
+    background-color: rgba(255, 192, 203, 0.863);
+    color:rgba(255, 192, 203, 0.863); 
+}
+
+.fire {
+    background-color: #FBE3DF;
+    color:#FBE3DF; ;  
+}
+
+.grass {
+    background-color:#E2F9E1;
+    color: #E2F9E1;
+}
+
+.water {
+    background-color:#E0F1FD;
+    color: #E0F1FD;
+}
+
+.flying{
+    background-color:#5e66d1d8;
+    color:#5e66d1d8; ;
+}
+
+.fighting{
+    background-color:#d1925ed8;
+    color: #d1925ed8;  
+}
+
+.psychicimg{
+    position:absolute;
+    background-color: rgba(146, 81, 148, 0.644);
+    color: rgba(146, 81, 148, 0.644);
+    border: solid rgba(146, 81, 148, 0.644);
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;
+}
+
+.groundimg {
+    background-color: rgba(148, 81, 81, 0.644);
+    color: rgba(148, 81, 81, 0.644);
+    position:absolute;
+    border: solid rgba(148, 81, 81, 0.644);;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;
+}
+
+.ghostimg {
+    background-color: rgb(247, 247, 247); 
+    color:rgb(247, 247, 247);
+    position:absolute;
+    border: solid rgb(247, 247, 247);
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;  
+}
+
+.electricimg {
+    background-color: rgb(255, 255, 161);
+    color:rgb(255, 255, 161);
+    position:absolute;
+    border: solid rgb(255, 255, 161);
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;  
+}
+
+.bugimg {
+    background-color: #F6D6A7;
+    color:#F6D6A7;
+    position:absolute;
+    border: solid #F6D6A7;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;  
+}
+
+.poisonimg {
+    background-color: #e0a7f6;  
+    color:#e0a7f6;
+    position:absolute;
+    border: solid #e0a7f6;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;  
+}
+
+.normalimg {
+    background-color: #9b9191; 
+    color:#9b9191;
+    position:absolute;
+    border: solid #9b9191;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;  
+}
+
+.fairyimg {
+    background-color: rgba(255, 192, 203, 0.863);
+    color:rgba(255, 192, 203, 0.863);
+    position:absolute;
+    border: solid rgba(255, 192, 203, 0.863);;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;   
+}
+
+.fireimg {
+    background-color: #FBE3DF;
+    color:#FBE3DF;
+    position:absolute;
+    border: solid #FBE3DF;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;   
+}
+
+.grassimg {
+    background-color:#E2F9E1;
+    color: #E2F9E1;
+    position:absolute;
+    border: solid  #E2F9E1;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;
+}
+
+.waterimg {
+    background-color:#E0F1FD;
+    color: #E0F1FD;
+    position:absolute;
+    border: solid  #E0F1FD;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;
+}
+
+.flyingimg{
+    background-color:#5e66d1d8;
+    color:#5e66d1d8;
+    position:absolute;
+    border: solid  #5e66d1d8;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;
+}
+
+.fightingimg{
+    background-color:#d1925ed8;  
+    color: #d1925ed8;
+    position:absolute;
+    border: solid  #d1925ed8;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    scale: 2;
+    left: 200px;
+    top: 120px;  
 }

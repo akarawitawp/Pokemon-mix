@@ -11,7 +11,7 @@ function Realinfo(props) {
     speed: "spd",
   };
   return (
-    <div className="Info-container">
+    <div className={!pokemon ? "Info-containers close" : "Info-containers"}>
       <img
         className="Top-img"
         src={pokemon.sprites.other.dream_world.front_default}

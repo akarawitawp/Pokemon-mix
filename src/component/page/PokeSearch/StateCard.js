@@ -1,5 +1,4 @@
 import react from "react";
-import { Line } from "rc-progress";
 
 function StateCard(props) {
   const { pokemon } = props;

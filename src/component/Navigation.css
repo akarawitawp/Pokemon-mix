@@ -10,18 +10,21 @@
     transition: 550ms;
     z-index: 10;
 }
+
 .nav-menu.active{
     left: 0;
     transition: 350;
     z-index: 10;
 }
+
 .navbar{
     display: flex;
-    height: 80px;
+    height: 60px;
     justify-content: flex-start;
     align-items: center;
     z-index: 10;
 }
+
 .navbar-toggle{
     background: #121312;
     width: 100%;
@@ -31,19 +34,23 @@
     justify-content:flex-start;
     z-index: 10;
 }
+
 .menu-bar{
     font-size:2rem;
     margin-left: 2rem;
     z-index: 10;
 }
+
 svg{
     color:white;
     z-index: 10;
 }
+
 .nav-menu-item{
     width: 100%;
     z-index: 10;
 }
+
 .menu-text{
     display:flex;
     justify-content:flex-start;
@@ -52,8 +59,8 @@ svg{
     list-style: none;
     height: 60px;
     z-index: 10;
-
 }
+
 .menu-text a{
     text-decoration: none;
     color:#fff;
@@ -66,10 +73,12 @@ svg{
     border-radius: 4px;
     z-index: 10;
 }
+
 .menu-text a:hover{
     background-color: orange;
     z-index: 10;
 }
+
 span{
     margin-left: 16px ;
     z-index: 10;

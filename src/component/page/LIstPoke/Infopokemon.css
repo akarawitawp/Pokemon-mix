@@ -1,4 +1,4 @@
-.Info-container{
+.Info-containers{
     position: fixed;
     display:flex;
     justify-content: center;
@@ -12,6 +12,11 @@
     top: 200Px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
 }
+.Info-containers.close{
+    right: -100%;
+    transition: 1000ms;
+}
+
 .Top-img{
     position:absolute;
     filter:grayscale(100%);

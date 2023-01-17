@@ -1,12 +1,10 @@
 import axios from "axios";
-import StateCard from "./PokeSearch/StateCard";
 import { useState } from "react";
 import "./PokeSearch/PokemonSearch.css";
-import { Line } from "rc-progress";
 
 function PokemonSearch() {
   const [pokemonName, setPokemonName] = useState("");
-  const [pokemonChosen, setPokemonChosen] = useState([]);
+  const [pokemonChosen, setPokemonChosen] = useState();
   const [pokemon, setPokemon] = useState([]);
 
   const searchPokemon = () => {
@@ -23,6 +21,7 @@ function PokemonSearch() {
           defense: response.data.stats[2].base_stat,
           specialATK: response.data.stats[3].base_stat,
           specialDEF: response.data.stats[4].base_stat,
+          speed: response.data.stats[5].base_stat,
           type: response.data.types[0].type.name,
         });
       });
@@ -33,91 +32,229 @@ function PokemonSearch() {
 
   return (
     <div className="App">
-      <h1>pokemon stats</h1>
-      <div className="stat-display">
-        {!pokemonChosen ? (
-          <h1>Please choose a pokemon</h1>
-        ) : (
-          <>
-            <div ClassName="NamePlate">
-              <img src={pokemon.img} />
-              <h1>{pokemon.name}</h1>
-              <h3>Type:{pokemon.type}</h3>
-              <h3>Species:{pokemon.species}</h3>
-            </div>
-            <div className="Power-stat">
-              <div className="Hp">
-                Hp: {pokemon.hp}{" "}
-                <Line
-                  percent={pokemon.hp}
-                  strokeWidth={10}
-                  strokeColor="green"
-                  trailColor="rgba(0, 0, 0, 0.863)"
+      <div classname="Container">
+        <div className="stat-display">
+          {!pokemonChosen ? (
+            <>
+              <div className="NamePlate1">
+                <img
+                  className="firstImage"
+                  src="https://web-pokedex.vercel.app/assets/img/Pokemon-Pokeball-PNG-HD-Image.png"
                 />
+                <h1 className={"Nameh1"}>Pokemon</h1>
+                <medium className="StartType">Type</medium>
+                <medium className="StartName">Pokemon</medium>
+                <div className="Search-container">
+                  <div className="Search-box">
+                    <input
+                      className="Input-container"
+                      type="text"
+                      placeholder="Type a Pokemon"
+                      onChange={(event) => {
+                        setPokemonName(event.target.value);
+                      }}
+                    />
+                    <button
+                      className="Button-container"
+                      onClick={searchPokemon}
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
               </div>
 
-              <div className="attack">
-                <h1>Attack:{pokemon.attack}</h1>
-                <Line
-                  percent={pokemon.attack}
-                  strokeWidth={10}
-                  strokeColor="red"
-                  trailColor="rgba(0, 0, 0, 0.863)"
+              <div className="Power-stat">
+                <img
+                  className="pokemonlogo"
+                  src="https://nproxy.org/img_contents/4857/29gntwcxhd2n3-16-9.webp"
                 />
+                <div className="Hp-container">
+                  <div className="Hp">
+                    <h2>Max HP</h2>
+                  </div>
+                  <div className="HpBar" style={{ width: pokemon.hp + "px" }}>
+                    {pokemon.hp}
+                  </div>
+                </div>
+
+                <div className="Attack-container">
+                  <div className="Attack">
+                    <h2>Attack</h2>
+                  </div>
+                  <div
+                    className="AttackBar"
+                    style={{ width: pokemon.attack + "px" }}
+                  >
+                    {pokemon.attack}
+                  </div>
+                </div>
+
+                <div className="Defense-container">
+                  <div className="Defense">
+                    <h2>Defense</h2>
+                  </div>
+                  <div
+                    className="DefenseBar"
+                    style={{ width: pokemon.defense + "px" }}
+                  >
+                    {pokemon.defense}
+                  </div>
+                </div>
+
+                <div className="Special-ATK-container">
+                  <div className="Special-ATK">
+                    <h2>S-ATK</h2>
+                  </div>
+                  <div
+                    className="Special-ATKBar"
+                    style={{ width: pokemon.specialATK + "px" }}
+                  >
+                    {pokemon.specialATK}
+                  </div>
+                </div>
+
+                <div className="Special-DEF-container">
+                  <div className="Special-DEF">
+                    <h2>S-DEF</h2>
+                  </div>
+                  <div
+                    className="Special-DEFBar"
+                    style={{ width: pokemon.specialDEF + "px" }}
+                  >
+                    {pokemon.specialDEF}
+                  </div>
+                </div>
+
+                <div className="Speed-container">
+                  <div className="Speed">
+                    <h2>Speed</h2>
+                  </div>
+                  <div
+                    className="SpeedBar"
+                    style={{ width: pokemon.speed + "px" }}
+                  >
+                    {pokemon.speed}
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="NamePlate">
+                <img className={pokemon.type + "img"} src={pokemon.img} />
+                <h1 className={"Nameh1"}>{pokemon.name}</h1>
+                <medium className={pokemon.type + "StartType"}>Type</medium>
+                <medium className={pokemon.type + "StartName"}>
+                  {pokemon.type}
+                </medium>
+                <div className="Search-container">
+                  <div className="Search-box">
+                    <input
+                      className="Input-container"
+                      type="text"
+                      placeholder="Type a Pokemon"
+                      onChange={(event) => {
+                        setPokemonName(event.target.value);
+                      }}
+                    />
+                    <button
+                      className="Button-container"
+                      onClick={searchPokemon}
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
               </div>
 
-              <div className="defense">
-                <h1>defense:{pokemon.defense}</h1>
-                <Line
-                  percent={pokemon.defense}
-                  strokeWidth={10}
-                  strokeColor="orange"
-                  trailColor="rgba(0, 0, 0, 0.863)"
+              <div className="Power-stat">
+                <img
+                  className="pokemonlogo"
+                  src="https://nproxy.org/img_contents/4857/29gntwcxhd2n3-16-9.webp"
                 />
-              </div>
+                <div className="Hp-container">
+                  <div className="Hp">
+                    <h2>Max HP</h2>
+                  </div>
+                  <div className="HpBar" style={{ width: pokemon.hp + "px" }}>
+                    {pokemon.hp}
+                  </div>
+                </div>
 
-              <div className="Special-ATK">
-                <h1>S-ATK:{pokemon.specialATK}</h1>
-                <Line
-                  percent={pokemon.specialATK}
-                  strokeWidth={10}
-                  strokeColor="purple"
-                  trailColor="rgba(0, 0, 0, 0.863)"
-                />
-              </div>
+                <div className="Attack-container">
+                  <div className="Attack">
+                    <h2>Attack</h2>
+                  </div>
+                  <div
+                    className="AttackBar"
+                    style={{ width: pokemon.attack + "px" }}
+                  >
+                    {pokemon.attack}
+                  </div>
+                </div>
 
-              <div className="Special-DEF">
-                <h1>S-DEF:{pokemon.specialDEF}</h1>
-                <Line
-                  percent={pokemon.specialDEF}
-                  strokeWidth={10}
-                  strokeColor="#C9472A"
-                  trailColor="rgba(0, 0, 0, 0.863)"
-                />
+                <div className="Defense-container">
+                  <div className="Defense">
+                    <h2>Defense</h2>
+                  </div>
+                  <div
+                    className="DefenseBar"
+                    style={{ width: pokemon.defense + "px" }}
+                  >
+                    {pokemon.defense}
+                  </div>
+                </div>
+
+                <div className="Special-ATK-container">
+                  <div className="Special-ATK">
+                    <h2>S-ATK</h2>
+                  </div>
+                  <div
+                    className="Special-ATKBar"
+                    style={{ width: pokemon.specialATK + "px" }}
+                  >
+                    {pokemon.specialATK}
+                  </div>
+                </div>
+
+                <div className="Special-DEF-container">
+                  <div className="Special-DEF">
+                    <h2>S-DEF</h2>
+                  </div>
+                  <div
+                    className="Special-DEFBar"
+                    style={{ width: pokemon.specialDEF + "px" }}
+                  >
+                    {pokemon.specialDEF}
+                  </div>
+                </div>
+
+                <div className="Speed-container">
+                  <div className="Speed">
+                    <h2>Speed</h2>
+                  </div>
+                  <div
+                    className="SpeedBar"
+                    style={{ width: pokemon.speed + "px" }}
+                  >
+                    {pokemon.speed}
+                  </div>
+                </div>
               </div>
-            </div>
-          </>
-        )}
-      </div>
-      <div className="Search-container">
-        <input
-          className="Input-container"
-          type="text"
-          onChange={(event) => {
-            setPokemonName(event.target.value);
-          }}
-        />
-        <button className="Button-container" onClick={searchPokemon}>
-          Search pokemon
-        </button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
 }
 export default PokemonSearch;
 
-/*{!pokemonChosen ? (
+/*
+{!pokemonChosen ? (
   <h1>Please choose a pokemon</h1>
 ) : (
   { PokemonElements }
-)}*/
+)}
+*/

@@ -1,4 +1,4 @@
-.Info-container{
+.Info-containers{
     position: fixed;
     display:flex;
     flex-direction: column;
@@ -11,11 +11,15 @@
     width: 20%;
     height: 100%;
     right: 100px;
-    top: 200Px;
+    top: 200px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
     scale: 1.0;
+    transition: 1000ms;
 }
-
+.Info-containers.close{
+    right: -100%;
+    transition: 500ms;
+}
 .Top-img{
     position:absolute;
     filter:grayscale(100%);
@@ -25,11 +29,13 @@
     top:-150px;
     z-index: 2;
 }
+
 .Ability-container{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
 }
+
 .ability{
     border: 0 solid;
     background-color: #809fad85;
@@ -38,13 +44,13 @@
     padding-right: 5px;
 }
 
-
 .Stat-container{
     display: grid;
     grid-template-columns:auto auto auto auto auto auto ;
     margin: 10px;
     gap: 10px;
 }
+
 .hp{
     background-color: rgba(13, 235, 24, 0.863);
     border: 0px solid ;
@@ -52,30 +58,31 @@
     font-size: xx-small;
     width: 30px;
 }
+
 .attack{
     background-color: rgba(197, 82, 82, 0.712);
     border: 0px solid ;
     border-radius: 10px;
     font-size: xx-small;
     width: 25px;
-
 }
+
 .defense{
     background-color: rgba(224, 100, 17, 0.938);
     border: 0px solid ;
     border-radius: 10px;
     font-size: xx-small;
     width: 25px;
-
 }
+
 .special-defense{
     background-color: rgba(141, 82, 197, 0.76);
     border: 0px solid ;
     border-radius: 10px;
     font-size: xx-small;
     width: 25px;
-
 }
+
 .special-attack{
     background-color: rgba(82, 151, 197, 0.76);
     border: 0px solid ;
@@ -83,6 +90,7 @@
     font-size: xx-small;
     width: 25px;
 }
+
 .speed{
     background-color: rgba(36, 202, 100, 0.76);
     border: 0px solid ;
@@ -90,9 +98,11 @@
     font-size: xx-small;
     width: 25px;
 }
+
 .Typeinfo-container h1{
     font-size: 20px;
 }
+
 .psychicInfo{
   background-color: rgba(146, 81, 148, 0.644);
   border: 0 solid ;
@@ -100,6 +110,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .groundInfo {
   background-color: rgba(148, 81, 81, 0.644);
   border: 0 solid ;
@@ -107,6 +118,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .ghostInfo {
   background-color: rgb(247, 247, 247);
   border: 0 solid ;
@@ -114,6 +126,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .electricInfo {
   background-color: rgb(255, 255, 161);
   border: 0 solid ;
@@ -121,6 +134,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .bugInfo {
   background-color: #F6D6A7;
   border: 0 solid ;
@@ -128,6 +142,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .poisonInfo {
   background-color: #e0a7f6;
   border: 0 solid ;
@@ -135,6 +150,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .normalInfo {
   background-color: #9b9191;
   border: 0 solid ;
@@ -142,6 +158,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .fairyInfo {
   background-color: rgba(255, 192, 203, 0.863);
   border: 0 solid ;
@@ -149,6 +166,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .fireInfo {
   background-color: #FBE3DF;
   border: 0 solid ;
@@ -156,6 +174,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .grassInfo {
   background-color:#E2F9E1;
   border: 0 solid ;
@@ -163,6 +182,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .waterInfo {
   background-color:#E0F1FD;
   border: 0 solid ;
@@ -170,6 +190,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .flyingInfo{
   background-color:#5e66d1d8;
   border: 0 solid ;
@@ -177,6 +198,7 @@
   width: 100px;
   padding:0 5px;
 }
+
 .fightingInfo{
   background-color:#d1925ed8;
   border: 0 solid ;
@@ -184,11 +206,13 @@
   width: 100px;
   padding: 0 5px;      
 }
+
 .Shape-container{
     display: flex;
     justify-content: space-between;
     
 }
+
 .shape{
     border: #E0F1FD;
     border-radius: 10px;
