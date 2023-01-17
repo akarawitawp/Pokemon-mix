@@ -229,7 +229,7 @@ h3 {
 
 .Type-container{
   display:flex;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .Search-container{
